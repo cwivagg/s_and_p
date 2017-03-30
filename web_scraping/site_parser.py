@@ -44,16 +44,15 @@ class site_parser:
                       len(self.results[column])-1:
                     self.results[col_num].append('')
 
-    def print_table( self ):
+    def print_table( self, delimiter='/t' ):
         my_file = open( self.to, 'w' )
         table = self.results
         end_col = len( table )-1
         for row in range(len(table[end_col])):
             for column in range(len(table)):
                 my_file.write( table[column][row] )
-                my_file.write( ',' if column!=end_col else '\n' )
+                my_file.write( 'delimiter' if column!=end_col else '\n' )
         my_file.close( )
-        print len(table[0]),len(table[2]),table[0][327]
 
     def parse( self ):
         for file in listdir(self.fro):
@@ -61,10 +60,9 @@ class site_parser:
             tree = etree.parse( contents, etree.HTMLParser( ) )
             root = tree.getroot( )
             for ele in self.element_format:
-                for result in root.xpath( self.elements[ele] ):
-                    #print result
-                    result = result.encode( 'ascii', 'ignore' ).strip()
-                    self.add_to_result_table( result, ele )
+                result = root.xpath( self.elements[ele] )[0]
+                result = result.encode( 'ascii', 'ignore' ).strip()
+                self.add_to_result_table( result, ele )
             contents.close( )
         print self.results
         self.print_table( )
