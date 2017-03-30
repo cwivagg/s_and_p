@@ -18,8 +18,9 @@ class scraper:
         sites = self.rem_sites
         while sites:
             site = sites.pop( )
-#            try:
-            scrape_to( site, dest )
-#            except:
-#                self.err_sites.append( site )
+            try:
+                scrape_to( site, dest )
+            except:
+                self.err_sites.append( site )
             sleep( delay )
+        print self.err_sites

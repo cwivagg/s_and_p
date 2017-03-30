@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/cwivagg/Documents/insight/un_project/web_scraping')
+sys.path.append('./web_scraping')
 
 import numpy as np
 import pandas as pd
