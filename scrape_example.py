@@ -6,12 +6,9 @@
 #   downloading such a small number of websites, I set a very large crawl delay
 #   of 3 s.
 
-import sys
-sys.path.append('./web_scraping')
-
 import numpy as np
 import pandas as pd
-import scraper as s
+from web_scraping import scraper
 
 # A list of ticker symbols I found on the Internet. The morningstar URLs for
 #   each company are identical except for the ticker symbols, which function as
@@ -29,5 +26,5 @@ constituents['site_list'] = constituents[[
                            'Symbol', \
                            'suffix' ]].apply(lambda x: ''.join(x), axis=1)
 
-scraper = s.scraper(constituents['site_list'].values.tolist())
+scraper = scraper.scraper(constituents['site_list'].values.tolist())
 scraper.scrape_all(dest='./stored_websites/',delay=3)

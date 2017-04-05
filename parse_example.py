@@ -5,9 +5,7 @@
 #   extracted information.
 
 import sys
-sys.path.append('./web_scraping')
-
-import site_parser as p
+from web_scraping import site_parser
 
 # selecting web elements we desire
 #  1. company
@@ -19,8 +17,8 @@ ele.append( './/h1/text()' )
 ele.append( './/h2/a/text()' )
 ele.append( './/tbody/tr/td[4]/text()' )
 
-parser = p.site_parser()
-parser.set_destination('./parsed_officers')
+parser = site_parser.site_parser()
+parser.set_destination('./parsed_officers_test')
 parser.set_targets('./stored_websites2/')
 for element in ele:
 	parser.add_element(element)
