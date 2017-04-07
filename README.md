@@ -1,5 +1,13 @@
 # Overview
-The purpose of this repository is to enable visualization of the links between large companies in the United States. Inspired by the brilliant [work](https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/) of Kieran Healy, I wished to see whether extremely simple information about people, such as which directors sit on which boards together, could tell us anything about the structure of corporate America.
+The purpose of this repository is to enable visualization of the links between large companies in the United States. Inspired by the brilliant [work](https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/) of Kieran Healy in "Using Metadata to Find Paul Revere", I wished to see whether extremely simple information about people, such as which directors sit on which boards together, could reveal underlying structure in corporate America. Such information could be useful in predicting takeovers or mergers, or could be useful in antitrust actions; companies with closely related directors and operating in closely related industries could be colluding.
+
+At present, I have a single analytical function that allows graphs of arbitrary size to be drawn around individuals.
+```$ get_info('WilliamGates', entity_type='director')```
+Show those individuals that sit on the same boards as Bill Gates. The 'entity_type' argument defaults to 'company'.
+```$ get_info('Alphabet Inc (GOOG.O)', 3)```
+Show companies that you can reach by three board connections from Google.
+
+The list of searchable officers is in 'officers_list.txt'. Getting more flexible searching is at present a distant aspiration.
 
 This project is presently under construction. It is designed to be extensible and modifiable. The scraping and parsing module is a light wrapper for Python's urllib2 and lxml libraries; my hope was to create a small module of my own that would lessen the work involved in scraping tables of data from the Internet, a task that has been common to several recent projects I have undertaken.
 # To Use

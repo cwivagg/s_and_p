@@ -8,6 +8,7 @@ from os import listdir
 from lxml import etree
 
 class SiteParser(object):
+
     """Systematically extracts specific html elements from a document.
 
     site_parser methods:
