@@ -1,4 +1,4 @@
-"""Initialize the web_scraping module.
+"""Initialize the src module.
 
 scraper - a simple wrapper for urllib2 to download websites
 site_parser - a simple wrapper for lxml to parse html websites

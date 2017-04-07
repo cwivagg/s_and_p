@@ -5,7 +5,7 @@ scraper -- should be used as the default option
 """
 
 from time import sleep
-import web_scraping.helper_functions
+import src.helper_functions
 
 class Scraper(object):
     """Basic web scraper built around urllib2.urlopen.

@@ -1,4 +1,4 @@
-"""Invoke web_scraping.parser to process morningstar.com downloads.
+"""Invoke src.parser to process morningstar.com downloads.
 
 This code takes the raw html of a website, invokes my parser class, and
 extracts specified text elements. The parser operates on a directory of
@@ -12,10 +12,10 @@ stored_websites.
 """
 
 import sys
-from web_scraping import site_parser
+from src import site_parser
 
 def main():
-    """Invoke web_scraping.parser as described above."""
+    """Invoke src.parser as described above."""
 
     # Select web elements we desire.
     #  1. company

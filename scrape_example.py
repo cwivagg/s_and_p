@@ -15,10 +15,10 @@ of 3 s.
 
 import numpy as np
 import pandas as pd
-from web_scraping import scraper
+from src import scraper
 
 def main():
-    """ Invoke scraper from web_scraping module to download listings."""
+    """ Invoke scraper from src module to download listings."""
 
     # A list of ticker symbols I found on the Internet. The morningstar URLs for
     # each company are the same except for the symbols, which function as keys.
