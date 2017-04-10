@@ -22,7 +22,7 @@ def main():
 
     # A list of ticker symbols I found on the Internet. The morningstar URLs for
     # each company are the same except for the symbols, which function as keys.
-    constituents = pd.read_csv('constituents.csv')
+    constituents = pd.read_csv('data/constituents.csv')
     ticker_symbols = constituents['Symbol'].values
 
     prefix = 'http://www.reuters.com/finance/stocks/companyOfficers?symbol='

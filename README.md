@@ -22,7 +22,7 @@ git clone https://github.com/cwivagg/s_and_p
 ```
 If you do not wish to use the command line, use the buttons at the top right of the page.
 ## 2) Terminal
-First, scrape_example.py downloads websites containing the boards of directors and company officers for each company in the S&P 500 stock index.
+You may skip directly to the Jupyter notebook step if you do not wish to repeat the scraping and parsing operations. First, scrape_example.py downloads websites containing the boards of directors and company officers for each company in the S&P 500 stock index.
 ```
 $ mkdir stored_websites
 $ python scrape_example.py

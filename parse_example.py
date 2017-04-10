@@ -27,7 +27,7 @@ def main():
     ele.append('.//tbody/tr/td[4]/text()')
 
     parser = site_parser.SiteParser()
-    parser.set_destination('./parsed_officers')
+    parser.set_destination('./parsed_officers.txt')
     parser.set_targets('./stored_websites/')
     for element in ele:
         parser.add_element(element)
